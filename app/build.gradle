@@ -83,6 +83,9 @@ dependencies {
 
     // DataStore
     implementation "androidx.datastore:datastore-preferences:$dataStoreVersion"
+
+    // Weather
+    implementation 'com.android.volley:volley:1.2.1'
 }
 
 kapt {

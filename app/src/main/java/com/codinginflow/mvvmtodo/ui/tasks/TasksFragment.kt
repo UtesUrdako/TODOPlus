@@ -102,6 +102,10 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
                         val action = TasksFragmentDirections.actionGlobalDeleteAllCompletedDialogFragment()
                         findNavController().navigate(action)
                     }
+                    TasksViewModel.TasksEvent.NavigateToWeatherScreen -> {
+                        val action = TasksFragmentDirections.actionTasksFragmentToWeatherFragment()
+                        findNavController().navigate(action)
+                    }
                 }.exhaustive
             }
         }
@@ -156,6 +160,10 @@ class TasksFragment : Fragment(R.layout.fragment_tasks), TasksAdapter.OnItemClic
             }
             R.id.action_delete_all_completed_tasks -> {
                 viewModel.onDeleteAllCompletedClick()
+                true
+            }
+            R.id.action_show_weather -> {
+                viewModel.onShowWeatherScreen()
                 true
             }
             else -> super.onOptionsItemSelected(item)

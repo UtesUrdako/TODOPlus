@@ -39,4 +39,9 @@
         android:title="Delete all completed"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/action_show_weather"
+        android:title="Weather"
+        app:showAsAction="never" />
+
 </menu>

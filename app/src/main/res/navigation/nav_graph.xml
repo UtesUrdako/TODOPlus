@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_tasksFragment_to_addEditTaskFragment"
             app:destination="@id/addEditTaskFragment" />
+        <action
+            android:id="@+id/action_tasksFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
     </fragment>
     <fragment
         android:id="@+id/addEditTaskFragment"
@@ -32,4 +35,9 @@
         android:id="@+id/deleteAllCompletedDialogFragment"
         android:name="com.codinginflow.mvvmtodo.ui.deleteallcompleted.DeleteAllCompletedDialogFragment"
         android:label="DeleteAllCompletedDialogFragment" /><action android:id="@+id/action_global_deleteAllCompletedDialogFragment" app:destination="@id/deleteAllCompletedDialogFragment"/>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.codinginflow.mvvmtodo.ui.weather.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/fragment_weather" />
 </navigation>

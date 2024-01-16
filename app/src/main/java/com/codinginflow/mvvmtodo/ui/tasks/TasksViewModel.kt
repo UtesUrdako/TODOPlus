@@ -84,7 +84,12 @@ class TasksViewModel @ViewModelInject constructor(
         tasksEventChannel.send(TasksEvent.NavigateToDeleteAllCompletedScreen)
     }
 
+    fun onShowWeatherScreen() = viewModelScope.launch {
+        tasksEventChannel.send(TasksEvent.NavigateToWeatherScreen)
+    }
+
     sealed class TasksEvent {
+        object NavigateToWeatherScreen : TasksEvent()
         object NavigateToAddTaskScreen : TasksEvent()
         data class NavigateToEditTask(val task: Task) : TasksEvent()
         data class ShowUndoDeleteTaskMessage(val task: Task) : TasksEvent()
