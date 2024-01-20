@@ -28,7 +28,15 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+
+    fun getWeather(name: String) {
+        val url = "https://api.weatherapi.com/v1/current.json" +
+                "?key=$WEATHER_API_KEY&q=$name&aqi=no"
+
+
+    }
 }
 
 const val ADD_TASK_RESULT_OK = Activity.RESULT_FIRST_USER
 const val EDIT_TASK_RESULT_OK = Activity.RESULT_FIRST_USER + 1
+const val WEATHER_API_KEY = "851ed4c3943444439d5182517241701"
